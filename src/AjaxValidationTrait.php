@@ -4,7 +4,7 @@
  * Date: 08.07.16
  */
 
-namespace common\traits;
+namespace demmonico\traits;
 use Yii;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
