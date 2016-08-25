@@ -10,7 +10,9 @@
     ],
     "require": {
         "php": ">5.5.0",
-        "yiisoft/yii2": "~2.0.0"
+        "yiisoft/yii2": "~2.0.0",
+
+        "demmonico/yii2-helpers": "*"
     },
     "autoload": {
         "psr-4": {
