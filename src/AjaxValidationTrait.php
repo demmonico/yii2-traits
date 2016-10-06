@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
  */
 trait AjaxValidationTrait
 {
-    private $_performAjaxValidation;
+    protected $_performAjaxValidationResult;
 
 
 
@@ -26,11 +26,10 @@ trait AjaxValidationTrait
          */
         if (Yii::$app->request->isAjax && $this->load(Yii::$app->request->post())) {
             Yii::$app->response->format = Response::FORMAT_JSON;
-            if (is_null($this->_performAjaxValidation)){
-                return $this->_performAjaxValidation = ActiveForm::validate($this);
-            } else {
-                return $this->_performAjaxValidation;
+            if (is_null($this->_performAjaxValidationResult)){
+                $this->_performAjaxValidationResult = ActiveForm::validate($this);
             }
+            return $this->_performAjaxValidationResult;
         }
         return null;
     }
