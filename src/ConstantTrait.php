@@ -43,6 +43,8 @@ trait ConstantTrait
 
             // get const labels
             $constArr = ReflectionHelper::getConstants($class, $constPrefix);
+            if (empty($constArr))
+                throw new \Exception("Calling unknown method '$name' at class '$class'");
 
             // get overwritten labels
             $customLabelsName = $constPrefix.'ConstantLabels';
