@@ -1,15 +1,18 @@
-#Yii2 traits library
-##Description
+# Yii2 traits library
+
+## Description
+
 Yii2 traits library which used in web-application development.
 
 
 
-##Composition
-###AjaxValidationTrait
+## Composition
+
+### AjaxValidationTrait
 
 Trait add perform ajax validation to models and forms. 
 
-#####Usage:
+##### Usage:
 
 use [demmonico\models\Model](https://github.com/demmonico/yii2-models) as parent or set in you model
 
@@ -24,11 +27,13 @@ if (!is_null($validate = $model->performAjaxValidation()))
             return $validate;
 ```
 
-###ConstantTrait
+### ConstantTrait
+
+***!!! This trait is DEPRECATED*** Use [demmonico/reflection](https://github.com/demmonico/reflection) instead!!!
 
 Trait generates array of class constant labels or one label by constant value 
 
-#####Usage:
+##### Usage:
 
 set in your model
 
